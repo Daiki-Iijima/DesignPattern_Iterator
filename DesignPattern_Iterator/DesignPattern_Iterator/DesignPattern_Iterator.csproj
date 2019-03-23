@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Agreegate.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="BookShelf.cs" />
+    <Compile Include="BookShelfIterator.cs" />
+    <Compile Include="Iterator.cs" />
+    <Compile Include="MainProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
