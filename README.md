@@ -1,2 +1,1 @@
-# DesignPattern_Iterator
-イテレータ
+# Iterator DesignPattern Sample
