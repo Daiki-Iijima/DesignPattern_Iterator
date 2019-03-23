@@ -20,9 +20,19 @@ namespace DesignPattern_Iterator
             bookShelf.appendBook(new Book("たちつてと"));
             
             IIterator it = bookShelf.Iterator();
+            IIterator rit = bookShelf.ReverseIterator();
+
+            Console.WriteLine("====順番に取得====");
             while (it.HasNext())
             {
                 Book book = (Book)it.Next();
+                Console.WriteLine(book.Name);
+            }
+
+            Console.WriteLine("====逆順で取得====");
+            while (rit.HasNext())
+            {
+                Book book = (Book)rit.Next();
                 Console.WriteLine(book.Name);
             }
 

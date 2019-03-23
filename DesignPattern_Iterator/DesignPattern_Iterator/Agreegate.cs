@@ -11,5 +11,8 @@ namespace DesignPattern_Iterator
     public interface IAggregate
     {
         IIterator Iterator();
+
+        //逆順取得
+        IIterator ReverseIterator();
     }
 }

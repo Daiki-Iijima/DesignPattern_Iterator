@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace DesignPattern_Iterator
 {
-    // 本棚をスキャンするクラス
-    public class BookShelfIterator : IIterator
+    public class ReverseBookShelfIterator : IIterator
     {
         BookShelf BookShelf { get; set; }
         int Index { get; set; }
-        public BookShelfIterator(BookShelf bookShelf)
+        public ReverseBookShelfIterator(BookShelf bookShelf)
         {
             this.BookShelf = bookShelf;
-            this.Index = 0;
+            this.Index = bookShelf.GetLength()-1;
+            Console.WriteLine("今の数" + this.Index);
         }
         public bool HasNext()
         {
-            if (Index < BookShelf.GetLength())
+            if (0 <= this.Index)
             {
                 return true;
             }
@@ -29,11 +29,9 @@ namespace DesignPattern_Iterator
         }
         public object Next()
         {
-            Book book = BookShelf.GetBookAt(Index);
-            this.Index++;
+            Book book = BookShelf.GetBookAt(this.Index);
+            this.Index--;
             return book;
         }
-        
     }
 }
-

@@ -50,6 +50,7 @@
     <Compile Include="Iterator.cs" />
     <Compile Include="MainProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReverseBookShelfIterator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
